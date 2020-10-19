@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+#
+#
+set -u -e -o pipefail
+
+blue="#132492"
+white="#ffffff"
+
+
+       sh/tv/time.text | $HOME/progs/lemonbar-xft/lemonbar -n "bottom_caption" -p -b 

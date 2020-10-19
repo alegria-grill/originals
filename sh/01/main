@@ -1,0 +1,22 @@
+#!/usr/bin/env zsh
+#
+#
+set -u -e -o pipefail
+
+
+if ! test "$USER" = "pi" ; then
+  set -x
+fi
+
+cd $HOME/apps/alegria
+mkdir -p tmp
+
+killall lemonbar || :
+killall mpv || :
+killall smplayer || :
+killall vlc || :
+
+git pull || :
+
+ruby src/01/display.rb || :
+

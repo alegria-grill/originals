@@ -1,0 +1,20 @@
+#!/usr/bin/env zsh
+#
+#
+#
+set -u -e
+
+
+cd $HOME/apps/alegria
+
+if sh/is.on.pi ; then
+  set -x
+fi
+
+now_24="$(date +"%H")"
+closing_24=$(sh/what.hour24.closing)
+if sh/is.opening || test $now_24 -ge $closing_24 ; then
+  exit 0
+fi
+
+exit 1

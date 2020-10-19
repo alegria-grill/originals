@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+#
+#
+set -u -e -o pipefail
+
+if ! test $(hostname) = "pi" ; then
+  set -x
+fi
+
+mins="$(date +"%-M")"
+
+sleep "$(( 60 - $mins - 1 ))m"
+sh/sleep.minute

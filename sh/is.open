@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+#
+#
+set -u -e
+
+cd $HOME/apps/alegria
+
+! sh/is.closed
+
