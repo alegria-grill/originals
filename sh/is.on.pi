@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-#
-#
-set -u -e
-
-test "$USER" = "pi"
